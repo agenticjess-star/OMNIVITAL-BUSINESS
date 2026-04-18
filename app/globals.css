@@ -1,0 +1,113 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+/* OmniVital Design System */
+:root {
+  /* Core Colors */
+  --bg: #0c0c0b;
+  --surface: #141413;
+  --surface2: #1a1a18;
+  --border: rgba(255,255,255,0.07);
+  --border-accent: rgba(20,172,142,0.3);
+  --text: #e8e6df;
+  --muted: #7a7870;
+  --muted2: #4a4845;
+  
+  /* Accent Colors */
+  --teal: #14ac8e;
+  --teal-dim: rgba(20,172,142,0.12);
+  --teal-mid: rgba(20,172,142,0.22);
+  --amber: #c9883a;
+  --amber-dim: rgba(201,136,58,0.1);
+  --amber-mid: rgba(201,136,58,0.2);
+  --purple: #9b7fd4;
+  --purple-dim: rgba(155,127,212,0.1);
+  --purple-mid: rgba(155,127,212,0.2);
+  --blue: #5b9bd5;
+  --blue-dim: rgba(91,155,213,0.1);
+  --blue-mid: rgba(91,155,213,0.2);
+  --red: #c84640;
+  --red-dim: rgba(200,70,60,0.1);
+
+  /* shadcn tokens mapped to OmniVital */
+  --background: #0c0c0b;
+  --foreground: #e8e6df;
+  --card: #141413;
+  --card-foreground: #e8e6df;
+  --popover: #141413;
+  --popover-foreground: #e8e6df;
+  --primary: #14ac8e;
+  --primary-foreground: #0c0c0b;
+  --secondary: #1a1a18;
+  --secondary-foreground: #e8e6df;
+  --muted-bg: #1a1a18;
+  --muted-foreground: #7a7870;
+  --accent: #1a1a18;
+  --accent-foreground: #e8e6df;
+  --destructive: #c84640;
+  --destructive-foreground: #e8e6df;
+  --input: rgba(255,255,255,0.07);
+  --ring: #14ac8e;
+  --radius: 0.5rem;
+}
+
+@theme inline {
+  --font-sans: 'DM Sans', sans-serif;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-mono: 'DM Mono', monospace;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted-bg);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-teal: var(--teal);
+  --color-amber: var(--amber);
+  --color-purple: var(--purple);
+  --color-blue: var(--blue);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom animations */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.5s ease both;
+}
+
+.animate-delay-1 { animation-delay: 0.05s; }
+.animate-delay-2 { animation-delay: 0.1s; }
+.animate-delay-3 { animation-delay: 0.15s; }
+.animate-delay-4 { animation-delay: 0.2s; }
+.animate-delay-5 { animation-delay: 0.25s; }
+.animate-delay-6 { animation-delay: 0.3s; }
