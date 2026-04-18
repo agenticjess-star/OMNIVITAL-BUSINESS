@@ -266,7 +266,7 @@ export default function FlywheelPage() {
       </div>
 
       {/* Section header */}
-      <div className="flex items-center gap-3 mb-8 animate-fade-up animate-delay-2">
+      <div className="flex items-center gap-3 mb-6 animate-fade-up animate-delay-2">
         <span className="font-mono text-[10px] tracking-[0.2em] text-muted-foreground uppercase">
           The five stages
         </span>
@@ -280,35 +280,35 @@ export default function FlywheelPage() {
             key={stage.number}
             data-stage
             data-index={index}
-            className={`grid md:grid-cols-[140px_1fr] gap-0 border-b border-[rgba(255,255,255,0.07)] last:border-b-0 transition-all duration-700 ${
+            className={`grid md:grid-cols-[160px_1fr] gap-0 border-b border-[rgba(255,255,255,0.07)] last:border-b-0 transition-all duration-700 ${
               visibleStages.has(index) ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
             style={{ transitionDelay: `${index * 0.1}s` }}
           >
             {/* Left column - stage meta */}
-            <div className="py-8 pr-6 md:border-r border-[rgba(255,255,255,0.07)] relative">
+            <div className="py-6 pr-6 md:border-r border-[rgba(255,255,255,0.07)] relative">
               {/* Stage dot with glow */}
-              <div className={`hidden md:block w-2.5 h-2.5 rounded-full absolute right-[-6px] top-10 ${stage.bgClass} ${stage.shadowClass} transition-all duration-500`} />
+              <div className={`hidden md:block w-2.5 h-2.5 rounded-full absolute right-[-6px] top-8 ${stage.bgClass} ${stage.shadowClass} transition-all duration-500`} />
               
-              <div className="font-mono text-[10px] tracking-[0.2em] text-muted-foreground uppercase mb-2">
+              <div className="font-mono text-[9px] tracking-[0.2em] text-muted-foreground/60 uppercase mb-1">
                 Stage {stage.number}
               </div>
-              <div className={`font-serif text-[22px] font-light leading-tight mb-1 ${stage.colorClass}`}>
+              <div className={`font-serif text-[26px] font-light leading-tight mb-1 ${stage.colorClass}`}>
                 {stage.name}
               </div>
-              <div className="font-mono text-[10px] text-muted-foreground tracking-[0.05em]">
+              <div className="text-[12px] text-foreground/60">
                 {stage.subtitle}
               </div>
             </div>
 
             {/* Right column - content */}
-            <div className="py-8 md:pl-8">
-              <p className="text-[13px] text-foreground leading-relaxed mb-4">
+            <div className="py-6 md:pl-8">
+              <p className="text-[13px] text-foreground/80 leading-relaxed mb-4">
                 {stage.description}
               </p>
               <div className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-sm ${stage.dimClass}`}>
                 <div className={`w-1.5 h-1.5 rounded-full ${stage.bgClass}`} />
-                <span className={`font-mono text-[10px] tracking-[0.1em] uppercase ${stage.colorClass}`}>
+                <span className={`font-mono text-[9px] tracking-[0.1em] uppercase ${stage.colorClass}`}>
                   {stage.keyPoint}
                 </span>
               </div>
@@ -318,8 +318,8 @@ export default function FlywheelPage() {
       </div>
 
       {/* The Flywheel Effect */}
-      <div className="mt-14 animate-fade-up animate-delay-3">
-        <div className="flex items-center gap-3 mb-6">
+      <div className="mt-12 animate-fade-up animate-delay-3">
+        <div className="flex items-center gap-3 mb-5">
           <span className="font-mono text-[10px] tracking-[0.2em] text-muted-foreground uppercase">
             The compounding effect
           </span>
@@ -327,7 +327,7 @@ export default function FlywheelPage() {
         </div>
         
         <div className="p-6 rounded-lg bg-card border border-[rgba(255,255,255,0.07)]">
-          <p className="text-[14px] text-foreground leading-relaxed mb-6">
+          <p className="text-[13px] text-foreground/80 leading-relaxed mb-6">
             Members who see results become active in the community. Active community members validate 
             the product for new visitors. New visitors convert at higher rates because they see real 
             people at week 8 — not stock photography.
@@ -357,10 +357,10 @@ export default function FlywheelPage() {
       </div>
 
       {/* Core alignment callout */}
-      <div className="mt-8 p-5 rounded-md bg-[rgba(20,172,142,0.12)] border-l-2 border-teal animate-fade-up animate-delay-4">
-        <p className="text-[14px] leading-relaxed">
+      <div className="mt-6 p-5 rounded-md bg-[rgba(20,172,142,0.12)] border-l-2 border-teal animate-fade-up animate-delay-4">
+        <p className="text-[13px] leading-relaxed">
           <strong className="text-teal">The core alignment:</strong>{" "}
-          <span className="text-foreground">
+          <span className="text-foreground/80">
             Higher conversion funds better product and better AI context. Better AI context drives 
             better outcomes. Better outcomes produce more engaged members. The business profits when 
             customers improve. That&apos;s the alignment that makes the flywheel defensible.

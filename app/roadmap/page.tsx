@@ -177,13 +177,13 @@ export default function RoadmapPage() {
             style={{ animationDelay: `${0.1 + phaseIndex * 0.07}s` }}
           >
             {/* Left col — phase meta */}
-            <div className="py-7 pr-7 md:border-r border-[rgba(255,255,255,0.07)] relative">
+            <div className="py-6 pr-7 md:border-r border-[rgba(255,255,255,0.07)] relative">
               {/* Phase dot */}
-              <div className={`hidden md:block w-2 h-2 rounded-full absolute right-[-5px] top-9 ${phase.bgClass} ${phase.shadowClass}`} />
-              <div className="font-mono text-[10px] tracking-[0.2em] text-muted-foreground uppercase mb-1">
+              <div className={`hidden md:block w-2 h-2 rounded-full absolute right-[-5px] top-8 ${phase.bgClass} ${phase.shadowClass}`} />
+              <div className="font-mono text-[9px] tracking-[0.2em] text-muted-foreground/60 uppercase mb-1">
                 Phase {phase.number}
               </div>
-              <div className={`font-serif text-[24px] font-light leading-tight mb-2 ${phase.colorClass}`}>
+              <div className={`font-serif text-[26px] font-light leading-tight mb-1 ${phase.colorClass}`}>
                 {phase.name.split(" ").map((word, i) => (
                   <span key={i}>
                     {word}
@@ -191,8 +191,8 @@ export default function RoadmapPage() {
                   </span>
                 ))}
               </div>
-              <div className="font-mono text-[11px] text-foreground/70">{phase.window}</div>
-              <div className={`font-mono text-[10px] mt-1 text-muted-foreground`}>
+              <div className="text-[12px] text-foreground/70">{phase.window}</div>
+              <div className={`text-[11px] mt-0.5 text-muted-foreground/50`}>
                 {phase.hours === "Delivered" ? "✓ " : ""}{phase.hours}
               </div>
             </div>
