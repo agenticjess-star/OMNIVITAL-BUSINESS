@@ -67,7 +67,30 @@ export default function HomePage() {
         </Link>
       </div>
 
-      <div className="grid grid-cols-3 gap-px bg-[rgba(255,255,255,0.07)] border border-[rgba(255,255,255,0.07)] rounded-lg overflow-hidden mt-6 animate-fade-up animate-delay-2">
+      <Link 
+        href="/flywheel" 
+        className="block bg-card p-6 hover:bg-[#1a1a18] transition-colors group border border-[rgba(255,255,255,0.07)] rounded-lg mt-6 animate-fade-up animate-delay-2"
+      >
+        <div className="flex items-center gap-3 mb-4">
+          <div className="w-2 h-2 rounded-full bg-purple shadow-[0_0_8px_var(--purple)]" />
+          <span className="font-mono text-[10px] tracking-[0.2em] text-muted-foreground uppercase">
+            Model
+          </span>
+        </div>
+        <h2 className="font-serif text-[28px] font-light text-foreground mb-2 group-hover:text-purple transition-colors">
+          Business Flywheel
+        </h2>
+        <p className="text-[13px] text-muted-foreground leading-relaxed">
+          The conversion and retention engine. Five stages where each reinforces the next — 
+          acquisition, conversion, activation, retention, expansion.
+        </p>
+        <div className="mt-6 flex items-center gap-3">
+          <span className="font-mono text-[12px] text-purple">5 Stages</span>
+          <span className="font-mono text-[10px] text-muted-foreground">self-reinforcing growth</span>
+        </div>
+      </Link>
+
+      <div className="grid grid-cols-3 gap-px bg-[rgba(255,255,255,0.07)] border border-[rgba(255,255,255,0.07)] rounded-lg overflow-hidden mt-6 animate-fade-up animate-delay-3">
         <div className="bg-card p-5">
           <div className="font-serif text-[36px] font-light text-teal leading-none mb-2">11k+</div>
           <div className="font-mono text-[10px] tracking-[0.1em] text-muted-foreground uppercase leading-tight">
@@ -88,7 +111,7 @@ export default function HomePage() {
         </div>
       </div>
 
-      <div className="mt-12 p-5 rounded-md bg-[rgba(20,172,142,0.12)] border-l-2 border-teal animate-fade-up animate-delay-3">
+      <div className="mt-12 p-5 rounded-md bg-[rgba(20,172,142,0.12)] border-l-2 border-teal animate-fade-up animate-delay-4">
         <p className="text-[13px] leading-relaxed">
           <strong className="text-teal">Talk to the AI advisor.</strong>{" "}
           <span className="text-muted-foreground">

@@ -28,6 +28,14 @@ export function SiteHeader() {
         >
           Roadmap
         </Link>
+        <Link 
+          href="/flywheel" 
+          className={`font-mono text-[11px] tracking-[0.1em] uppercase transition-colors hover:text-teal ${
+            pathname === '/flywheel' ? 'text-teal' : 'text-muted-foreground'
+          }`}
+        >
+          Flywheel
+        </Link>
       </nav>
     </header>
   )
