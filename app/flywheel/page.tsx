@@ -107,7 +107,7 @@ function FlywheelDiagram() {
   ]
   
   return (
-    <div ref={diagramRef} className="relative w-full max-w-[400px] mx-auto aspect-square">
+    <div ref={diagramRef} className="relative w-full max-w-[280px] md:max-w-[360px] mx-auto aspect-square">
       {/* Outer ring */}
       <svg className="w-full h-full" viewBox="0 0 400 400">
         {/* Background circle */}
@@ -190,8 +190,8 @@ function FlywheelDiagram() {
         />
       </svg>
       
-      {/* Labels */}
-      <div className="absolute inset-0 pointer-events-none">
+      {/* Labels - hidden on mobile to prevent overflow */}
+      <div className="absolute inset-0 pointer-events-none hidden md:block">
         {stageColors.map((stage, i) => {
           const angle = (i * 72 - 90) * (Math.PI / 180)
           const nextAngle = ((i + 1) * 72 - 90) * (Math.PI / 180)
@@ -245,7 +245,7 @@ export default function FlywheelPage() {
   }, [])
   
   return (
-    <main className="max-w-[820px] mx-auto px-8 py-16 md:py-20">
+    <main className="max-w-[820px] mx-auto px-8 py-16 md:py-20 overflow-x-hidden">
       <SiteHeader />
       
       {/* Hero */}

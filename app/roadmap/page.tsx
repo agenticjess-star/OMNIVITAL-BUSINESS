@@ -180,10 +180,10 @@ export default function RoadmapPage() {
             <div className="py-7 pr-7 md:border-r border-[rgba(255,255,255,0.07)] relative">
               {/* Phase dot */}
               <div className={`hidden md:block w-2 h-2 rounded-full absolute right-[-5px] top-9 ${phase.bgClass} ${phase.shadowClass}`} />
-              <div className="font-mono text-[10px] tracking-[0.2em] text-muted-foreground uppercase mb-2">
+              <div className="font-mono text-[10px] tracking-[0.2em] text-muted-foreground uppercase mb-1">
                 Phase {phase.number}
               </div>
-              <div className={`font-serif text-[20px] font-light text-foreground leading-tight mb-3`}>
+              <div className={`font-serif text-[24px] font-light leading-tight mb-2 ${phase.colorClass}`}>
                 {phase.name.split(" ").map((word, i) => (
                   <span key={i}>
                     {word}
@@ -191,17 +191,17 @@ export default function RoadmapPage() {
                   </span>
                 ))}
               </div>
-              <div className="font-mono text-[11px] text-muted-foreground">{phase.window}</div>
-              <div className={`font-mono text-[10px] mt-1.5 ${phase.colorClass}`}>
+              <div className="font-mono text-[11px] text-foreground/70">{phase.window}</div>
+              <div className={`font-mono text-[10px] mt-1 text-muted-foreground`}>
                 {phase.hours === "Delivered" ? "✓ " : ""}{phase.hours}
               </div>
             </div>
 
             {/* Right col — content */}
             <div className="py-7 md:pl-8">
-              <div className="text-[12px] text-muted-foreground leading-relaxed mb-5 pb-4 border-b border-[rgba(255,255,255,0.07)]">
-                <strong className="block font-mono text-[10px] tracking-[0.12em] uppercase mb-1.5">
-                  What this unlocked
+              <div className="text-[11px] text-muted-foreground/70 leading-relaxed mb-5 pb-4 border-b border-[rgba(255,255,255,0.07)]">
+                <strong className="block font-mono text-[9px] tracking-[0.12em] uppercase mb-1 text-muted-foreground/50">
+                  What this unlocks
                 </strong>
                 {phase.unlock}
               </div>
@@ -230,19 +230,19 @@ export default function RoadmapPage() {
                       )}
                     </div>
                     <div className="flex-1">
-                      <div className="text-[13px] text-foreground font-normal">
+                      <div className="text-[13px] text-foreground font-medium leading-snug">
                         {item.title}
                         {item.tags?.map((tag, tagIndex) => (
                           <span 
                             key={tagIndex}
-                            className={`inline-block font-mono text-[9px] tracking-[0.1em] uppercase px-1.5 py-0.5 rounded-sm ml-2 align-middle relative -top-px ${getTagColor(tag.color)}`}
+                            className={`inline-block font-mono text-[8px] tracking-[0.1em] uppercase px-1.5 py-0.5 rounded-sm ml-2 align-middle relative -top-px ${getTagColor(tag.color)}`}
                           >
                             {tag.label}
                           </span>
                         ))}
                       </div>
                       {item.detail && (
-                        <div className="text-[11px] text-muted-foreground mt-0.5 leading-relaxed">
+                        <div className="text-[10px] text-muted-foreground/60 mt-1 leading-relaxed">
                           {item.detail}
                         </div>
                       )}
